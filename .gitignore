@@ -1,0 +1,17 @@
+# Maven
+target/
+
+# Test reports / generated output
+test-output/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
+# macOS
+.DS_Store
