@@ -25,7 +25,11 @@ public class ConfigReader {
 	}
 	
 	public static String get(String key) {
-		loadProperties();
+		String override = System.getProperty(key);
+        if (override != null && !override.trim().isEmpty()) {
+            return override.trim();
+        }
+        loadProperties();
 		String value = properties.getProperty(key);
 		if(value==null)
 		{
